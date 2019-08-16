@@ -101,9 +101,10 @@
 
     [ 'OS == "mac"', {
       'xcode_settings': {
-        'SDKROOT': 'macos',
+        'SDKROOT': 'macosx',
         'FRAMEWORK_SEARCH_PATHS': '<(QT_LIB_PATH)',
         'OTHER_CPLUSPLUSFLAGS' : ['-std=gnu++11'],
+	'OTHER_LDFLAGS' : ["-Wl,-rpath /usr/local/lib" ],
       },
     } ],
 
